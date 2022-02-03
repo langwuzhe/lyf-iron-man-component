@@ -1,0 +1,41 @@
+#http指定端口
+#server.http.port=9002
+#https
+server:
+  port: 1000
+spring:
+  application:
+    name:
+      springboot1
+#    必须注意这个，不加这个配置，application-dev 这一堆加载不上
+#  profiles:
+#    active: '@profiles.active@'
+
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/lyf_iron_man?serverTimezone=GMT%2B8
+    username: root
+    password: 123456789
+
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*.xml
+  global-config:
+    #      主键使用数据库自增
+    db-config:
+      id-type: auto
+      #表名是否使用驼峰转下划线命名,只对表名生效（默认开启）
+      table-underline: true
+
+  configuration:
+    #    #org.apache.ibatis.logging.stdout.StdOutImpl 控制台打印sql语句方便调试sql语句执行错误
+    #    #org.apache.ibatis.logging.log4j2.Log4j2Impl:这个不在控制台打印查询结果,但是在log4j中打印
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #表名是否使用驼峰转下划线命名,只对列名名生效（默认开启）
+    mapUnderscoreToCamelCase: true
+
+
+
+
+
+
