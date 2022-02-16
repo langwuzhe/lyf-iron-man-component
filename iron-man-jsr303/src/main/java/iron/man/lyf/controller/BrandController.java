@@ -15,7 +15,7 @@ import java.util.Map;
 
 
 /**
- * 品牌
+ * 品牌 aa
  */
 @RestController
 @RequestMapping("product/brand")
