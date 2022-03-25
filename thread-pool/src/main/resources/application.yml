@@ -1,0 +1,15 @@
+#http指定端口
+#server.http.port=9002
+#https
+server:
+  port: 1003
+
+
+
+
+
+
+
+
+
+
